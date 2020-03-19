@@ -3726,7 +3726,7 @@ void jeita_rule(void)
 		FV_CFG_reg_value = SMBCHG_FLOAT_VOLTAGE_VALUE_4P350;
 
 		/* reg=1061 */
-       		FCC_reg_value = SMBCHG_FAST_CHG_CURRENT_VALUE_3000MA;
+       		FCC_reg_value = SMBCHG_FAST_CHG_CURRENT_VALUE_2500MA;
 					
 			
 		printk("%s: FCC_reg_value = 0x%x",
@@ -4047,7 +4047,7 @@ void asus_adapter_adc_work(struct work_struct *work)
 	msleep(5);
        	CHG_TYPE_judge(smbchg_dev);
 
-    	usb_max_current = ICL_3000mA;
+    	usb_max_current = ICL_2500mA;
 
 	rc = smblib_set_usb_suspend(smbchg_dev, 0);
 	if (rc < 0)
